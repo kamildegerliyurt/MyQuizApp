@@ -7,10 +7,10 @@ const CategoryButton = (props) => {
 const index = props.index
 const data = props.data
 const name = props.data.name
-//------------------------------
+
 const colors = ["#0079FF", "green", "orange", "#F94C66", "#EA047E", "tomato"]
 const randomColor = index % colors.length
-//------------------------------
+
 
 const navigation = useNavigation();
 
@@ -20,7 +20,7 @@ const handleButtonData = ()=> {
         dataValue: data.id
     })
 }
-//------------------------------
+
 
 
   return (
