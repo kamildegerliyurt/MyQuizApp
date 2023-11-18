@@ -10,25 +10,15 @@ import {Loading} from "./Loading"
 const AnswerBox = (props) => {
 
 const data = props?.sendAnswerData
-//----------------------------------------
 const dispatch = useDispatch();
-//----------------------------------------
 const {currentQuestionIndex, score, isLoading} = useSelector((state)=> state.data)
-
-console.log("Question Index: " , currentQuestionIndex)
-console.log("Score: ", score)
-//----------------------------------------
 const inCorrectAnswer = data[currentQuestionIndex]?.incorrect_answers
-console.log("AnswerBox 22.Line:", inCorrectAnswer)
 const correctAnswer = data[currentQuestionIndex]?.correct_answer
-console.log("AnswerBox 24.Line:", correctAnswer)
-//----------------------------------------
 const array = data && inCorrectAnswer &&  [correctAnswer, ...inCorrectAnswer]
 const shuffledArray =  array?.sort(()=> Math.random() - 0.5)
-console.log("AnswerBox 26.Line:" , shuffledArray)
-//----------------------------------------
+      
 const [ifTrue, setIfTrue]= useState(null)
-//----------------------------------------
+      
 const handleAnswersButton = (value)=> {
       const checkIfTrue = value === correctAnswer
 
@@ -37,11 +27,11 @@ const handleAnswersButton = (value)=> {
         checkIfTrue ? dispatch(setCorrectAnswer())
                     : dispatch(setIncorrectAnswer())
 }
-//----------------------------------------
+
 if (isLoading) {
   return <Loading />
 }
-//----------------------------------------
+
 
   return (
     <View style={styles.container}>
