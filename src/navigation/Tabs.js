@@ -28,8 +28,8 @@ const Tabs = () => {
                                                             borderTopRightRadius:20,
                                                             overflow:"hidden",
                                                             backgroundColor: "transparent",}}/>
-                           )
-                            }}>
+                                                  )
+                                                }}>
 
         <Tab.Screen name='Home'
                     component={Home}
