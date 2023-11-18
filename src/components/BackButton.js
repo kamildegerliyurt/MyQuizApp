@@ -10,9 +10,8 @@ import { setClearData } from '../redux/dataSlice';
 
 
 const BackButton = (props) => {
-//-----------------------------------
+
 const dispatch = useDispatch();
-//-----------------------------------
 const navigation = useNavigation();
 
 const handleBackButton = ()=> {
@@ -24,7 +23,6 @@ const handleBackButton = ()=> {
   })
    
 }
-//-----------------------------------
 
   return (
     <Pressable 
