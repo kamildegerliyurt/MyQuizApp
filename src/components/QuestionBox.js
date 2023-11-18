@@ -8,12 +8,12 @@ import he from 'he'
 const QuestionBox = (props) => {
 
 const data = props?.sendQuestionData
-//-----------------------------------
+
 const {currentQuestionIndex} = useSelector((state)=> state.data)
-//-----------------------------------
+
 const getQuestion = data[currentQuestionIndex]?.question
 const decodedText = getQuestion && he.decode(getQuestion)
-//-----------------------------------
+
 
 
   return (
