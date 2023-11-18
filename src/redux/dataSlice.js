@@ -3,7 +3,6 @@ import { getCategory, getQuestions } from "../api";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 
-//------------------------------------
 const initialState = {
     questions:[],
     categories:[],
@@ -13,19 +12,19 @@ const initialState = {
     error: null,
 }
 
-//--------------------------------------------------------------------------------------
+
 export const getCategoryData = createAsyncThunk('data/getCategoryData', async()=>{
     const response = await getCategory()
     return response
 })
 
-//--------------------------------------------------------------------------------------
+
 export const getQuestionsData  = createAsyncThunk('data/getQuestionsData', async(categoryID)=>{
     const response = await getQuestions(categoryID)
      console.log(response)
     return response;
 } )
-//--------------------------------------------------------------------------------------
+
 
 
 const dataSlice  = createSlice({
