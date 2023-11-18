@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 
-//--------------------------------------------------------------------------------------
+
 export const getScoresStorage = createAsyncThunk('scores/getScoresStorage', async()=>{
     try {
 
@@ -19,7 +19,7 @@ export const getScoresStorage = createAsyncThunk('scores/getScoresStorage', asyn
         console.log("Error getting scores from AsyncStorage ",error)
     }
 })
-//--------------------------------------------------------------------------------------
+
 
 const initialState = {
     scores:[],
