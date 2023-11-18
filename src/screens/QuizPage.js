@@ -10,23 +10,24 @@ import {QuestionBox, AnswerBox, SaveButton, BackButton, Loading} from "../compon
 
 const QuizPage = ({navigation, route}) => {
 
-//--------------------------------
+
 const total = route.params.dataValue
-//--------------------------------
+
 const dispatch = useDispatch();
+  
 const { questions, isLoading} = useSelector(state => state.data)
-//--------------------------------
+
 useEffect(() => {
 
   dispatch(getQuestionsData(total))
   
 }, [])
-//--------------------------------
+
 
 if(isLoading){
   return <Loading />
 }
-//--------------------------------
+
 
   return (
     <LinearGradient  style={styles.container}
