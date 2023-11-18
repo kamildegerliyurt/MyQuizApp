@@ -5,13 +5,13 @@ import { useDispatch, useSelector } from 'react-redux'
 import {saveScore} from "../redux/dataSlice/"
 
 const SaveButton = (props) => {
-//--------------------------------
+
 const dispatch = useDispatch();
-//--------------------------------
+
 const handleSaveButton = ()=> {
   dispatch(saveScore())
 }
-//--------------------------------
+
 
   return (
     <Pressable 
