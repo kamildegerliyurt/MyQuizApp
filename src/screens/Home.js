@@ -8,18 +8,18 @@ import { getCategoryData } from '../redux/dataSlice';
 import { CategoryButton, Loading } from '../components/';
 
 const Home = () => {
-//--------------------------------------------------
+
   const dispatch = useDispatch();
   const { categories, isLoading } = useSelector((state) => state.data);
-//--------------------------------------------------
+
   useEffect(() => {
     dispatch(getCategoryData());
   }, []);
-//--------------------------------------------------  
+ 
   if (isLoading) {
     return <Loading />;
   }
-//-------------------------------------------------- 
+
 
   return (
     <SafeAreaView style={styles.homeContainer}>
