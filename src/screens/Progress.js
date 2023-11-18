@@ -8,16 +8,16 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getScoresStorage } from '../redux/progressSlice'
 
 const Progress = () => {
-//------------------------------------------------------
+
 const dispatch = useDispatch();
+  
 const {scores}  = useSelector(state => state.progress)
-console.log("saved Scores Data: ", scores)
-//------------------------------------------------------
+
 
 useEffect(() => {
   dispatch(getScoresStorage())
 }, [])
-//------------------------------------------------------
+
 
 
   return (
